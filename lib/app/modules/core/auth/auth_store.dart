@@ -1,6 +1,6 @@
 import 'package:cuidapetmobile/app/models/user_model.dart';
 import 'package:mobx/mobx.dart';
-part 'auth_store.g.dart';
+part 'auth_storege.dart';
 
 class AuthStore = _AuthStoreBase with _$AuthStore;
 
@@ -10,9 +10,6 @@ abstract class _AuthStoreBase with Store {
 
   @action
   Future<void> loadUser() async {
-    userModel = UserModel
-    .empty();
+    userModel = UserModel.empty();
   }
-
-  
 }
