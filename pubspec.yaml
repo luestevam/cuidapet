@@ -35,12 +35,15 @@ dependencies:
   mobx: ^2.0.4
   flutter_mobx: ^2.0.2
   asuka: ^2.0.0-nullsafety.3
-  dio: ^4.0.0
+  dio: ^4.0.4
   flutter_screenutil: ^5.0.0+2
   firebase_core: ^1.12.0
   firebase_auth: ^3.3.6
   flutter_dotenv: ^5.0.2
   firebase_remote_config: ^2.0.0
+ 
+
+  
 
 
 
