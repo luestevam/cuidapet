@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:cuidapetmobile/app/core/helpers/environments.dart';
 import 'package:cuidapetmobile/app/core/rest_client/rest_client.dart';
 import 'package:cuidapetmobile/app/core/rest_client/rest_client_exeption.dart';
@@ -173,9 +171,7 @@ class DioRestClient implements RestClient {
       final response = await _dio.request<T>(path,
           data: data,
           queryParameters: queryParameters,
-          options: Options(
-            headers: headers,
-          ));
+          options: Options(headers: headers, method: method));
       return RestClientResponse(
           data: response.data,
           statusCode: response.statusCode,

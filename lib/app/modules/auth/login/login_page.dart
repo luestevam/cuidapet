@@ -1,9 +1,11 @@
 import 'package:cuidapetmobile/app/core/helpers/environments.dart';
+import 'package:cuidapetmobile/app/core/helpers/logger.dart';
 import 'package:cuidapetmobile/app/core/ui/extensions/size_screen_extension.dart';
 import 'package:cuidapetmobile/app/core/ui/extensions/theme_extension.dart';
 import 'package:cuidapetmobile/app/modules/auth/login/widget/LoginForm.dart';
 import 'package:cuidapetmobile/app/modules/auth/login/widget/Login_register_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,6 +17,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    LoggerImpl().warning('Carregando LoginPage');
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(

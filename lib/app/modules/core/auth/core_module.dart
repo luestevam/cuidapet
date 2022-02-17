@@ -1,3 +1,4 @@
+import 'package:cuidapetmobile/app/core/helpers/logger.dart';
 import 'package:cuidapetmobile/app/core/rest_client/dio_rest_client.dart';
 import 'package:cuidapetmobile/app/core/rest_client/rest_client.dart';
 import 'package:cuidapetmobile/app/modules/core/auth/auth_store.dart';
@@ -7,8 +8,7 @@ class CoreModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => AuthStore(), export: true),
-    Bind.factory<RestClient>(
-      (i) => DioRestClient(),
-    ),
+    Bind.factory<RestClient>((i) => DioRestClient(), export: true),
+    Bind.lazySingleton<Logger>((i) => LoggerImpl(), export: true),
   ];
 }

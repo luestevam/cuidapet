@@ -41,6 +41,7 @@ dependencies:
   firebase_auth: ^3.3.6
   flutter_dotenv: ^5.0.2
   firebase_remote_config: ^2.0.0
+  logger: ^1.1.0
  
 
   
